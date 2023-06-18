@@ -3,13 +3,13 @@ export const SlideShow = () => {
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="./src/assets/img/pxfuel.jpg" class="d-block w-100" alt="" />
+            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel.jpg" class="d-block w-100" alt="" />
             </div>
             <div class="carousel-item">
-            <img src="./src/assets/img/pxfuel2.jpg" class="d-block w-100" alt="" />
+            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg" class="d-block w-100" alt="" />
             </div>
             <div class="carousel-item">
-            <img src="./src/assets/img/pxfuel3.jpg" class="d-block w-100" alt="" />
+            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel3.jpg" class="d-block w-100" alt="" />
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

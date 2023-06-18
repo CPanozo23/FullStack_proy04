@@ -10,7 +10,7 @@ export const AboutUs = () => {
                 <div class="card">
   <div class="row no-gutters">
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-      <img src="./src/assets/img/pxfuel2.jpg" class="card-img" alt="Imagen" />
+      <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg" class="card-img" alt="Imagen" />
     </div>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
       <div class="card-body">
