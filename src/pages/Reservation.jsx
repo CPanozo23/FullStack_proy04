@@ -10,7 +10,10 @@ export const Reservation = () =>  {
   return(
     <main class="">
         <section class="container">
-      <h2 className='pt-3'>Reservaciones</h2>
+        <h1 className=" d-flex align-items-center">
+        <span class="material-symbols-outlined">restaurant</span>
+        Reservaciones
+      </h1>
       <article className=''>
         <p>{reservationText}</p>
         <img src="https://files.jotform.com/jotformapps/restaurant-reservation-form-2-bed5b76ab33ae425ca7c71161cb1a7a0-classic.png" />

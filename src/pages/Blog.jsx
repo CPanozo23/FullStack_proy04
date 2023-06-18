@@ -10,7 +10,9 @@ export const Blog = () =>  {
     return(
       <main class="">
           <section class="container">
-        <h2 className='pt-3'>Blog</h2>
+          <h1 className=" d-flex align-items-center">
+        <span class="material-symbols-outlined">news</span>
+          Blog</h1>
         <article className=''>
           <h3>Título de entrada</h3>
           <img src="https://media.istockphoto.com/id/840668580/photo/chilean-independence-day-concept-fiestas-patrias-chilean-typical-dish-and-drink-on.jpg?s=612x612&w=0&k=20&c=2pIdm28_TM8yZoB0qK_y4gJVMTzubUr8xM9okFX0kh4=" />

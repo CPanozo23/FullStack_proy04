@@ -10,7 +10,10 @@ export const Menu = () =>  {
   return(
     <main class="">
         <section class="container">
-      <h2 className='pt-3'>Menú</h2>
+        <h1 className=" d-flex align-items-center">
+        <span class="material-symbols-outlined">menu_book</span>
+        Menú
+      </h1>
       <article className=''>
         <p>{menuText}</p>
         <img src="https://images.ctfassets.net/trvmqu12jq2l/4uxhvrdlpIQdeGsHCdVmiE/c0cce06567dfc77cba3a90bd89d6e4e5/PortofPeriPeri.jpg?q=70&w=480" />

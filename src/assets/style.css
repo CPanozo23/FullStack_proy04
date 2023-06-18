@@ -9,3 +9,56 @@
   .active{
     color:red !important;
   }
+
+h1{
+  color:#0039a6
+}
+h1 .material-symbols-outlined {
+  font-size: 1.5em;
+}
+
+.carousel-inner{
+  border:0px solid blue;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 810px) {
+  .carousel-inner{
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 770px) {
+  .carousel-inner{
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .carousel-inner{
+    max-height: 250px;
+  }
+}
+
+.card .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+.card span{
+  font-size:2em;
+}
+
+@media (max-width: 992px) {
+  
+
+  .card div div img{
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
