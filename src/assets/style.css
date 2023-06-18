@@ -1,0 +1,11 @@
+.navbar img{
+    width: 250px;
+}
+
+.nav-link:hover {
+    color: red !important; /* Cambia el color de fondo según tus preferencias */
+  }
+
+  .active{
+    color:red !important;
+  }
