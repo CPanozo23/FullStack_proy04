@@ -54,11 +54,21 @@ h1 .material-symbols-outlined {
 }
 
 @media (max-width: 992px) {
-  
 
-  .card div div img{
+  .card .imgAbout{
     width: 100%;
     max-height: 250px;
     object-fit: cover;
   }
 }
+
+.card .imgContact{
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.colorIndigo{
+  color:indigo;
+}
+

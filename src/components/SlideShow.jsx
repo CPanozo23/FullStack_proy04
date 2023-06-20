@@ -1,25 +1,28 @@
+import React from 'react'
 export const SlideShow = () => {
-    return (
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel.jpg" class="d-block w-100" alt="" />
-            </div>
-            <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg" class="d-block w-100" alt="" />
-            </div>
-            <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel3.jpg" class="d-block w-100" alt="" />
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
-    )
+  const imageUrls = [
+    'https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel.jpg',
+    'https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg',
+    'https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel3.jpg',
+  ]
+
+  return (
+    <div className="carousel slide" data-bs-interval="3000">
+      <div className="carousel-inner">
+        {imageUrls.map((url, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <img src={url} className="d-block w-100" alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  )
 }

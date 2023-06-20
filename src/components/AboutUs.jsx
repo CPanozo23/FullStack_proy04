@@ -1,6 +1,6 @@
 export const AboutUs = () => {
     return (
-        <section id="AboutUs" className="p-0 my-0">
+        <section id="AboutUs" className=" bg-light p-0 my-0">
             <div className="container py-1 my-0">
                 <h1 className=" d-flex align-items-center">
                     <span class="material-symbols-outlined">food_bank</span>
@@ -10,7 +10,7 @@ export const AboutUs = () => {
                 <div class="card">
   <div class="row no-gutters">
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-      <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg" class="card-img" alt="Imagen" />
+      <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel2.jpg" class="card-img imgAbout" alt="Imagen" />
     </div>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
       <div class="card-body">
@@ -26,11 +26,11 @@ export const AboutUs = () => {
                 </div>
                 <div class="col">
                     Ranking <br />
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined text-warning ">star</span>
+                    <span class="material-symbols-outlined text-warning ">star</span>
+                    <span class="material-symbols-outlined text-warning ">star</span>
+                    <span class="material-symbols-outlined text-warning ">star</span>
+                    <span class="material-symbols-outlined text-warning ">star</span>
                 
                 </div>
             </div>
