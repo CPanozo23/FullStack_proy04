@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../public/img/pxfuel'
+import img1 from '../../public/img/pxfuel.jpg'
 export const SlideShow = () => {
   const imageUrls = [
     img1,
