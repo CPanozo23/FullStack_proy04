@@ -68,7 +68,19 @@ h1 .material-symbols-outlined {
   object-fit: cover;
 }
 
-.colorIndigo{
-  color:indigo;
+.accordion-item .accordion-header button.collapsed {
+  background:rgb(3, 196, 255, 0.1) !important;
 }
 
+.accordion-item .accordion-header button:not(.collapsed) {
+  background:rgb(0, 58, 166, 1) !important;
+  color: white
+}
+
+.accordion-button.collapsed .accordion-button::after {
+  color: red !important; /* Cambia el color de la flecha hacia abajo cuando el acordeón está desplegado */
+}
+
+.accordion-button:not(.collapsed) .accordion-button::after {
+  color: red !important; /* Cambia el color de la flecha hacia abajo cuando el acordeón está desplegado */
+}

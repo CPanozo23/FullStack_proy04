@@ -13,18 +13,18 @@ export const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                     <NavLink className="nav-item nav-link text-primary mx-2 d-flex align-items-center" to="/">
-                        <span class="material-symbols-outlined mx-1">home</span>
+                        <span className="material-symbols-outlined mx-1">home</span>
                         Home
                     </NavLink>
                     <NavLink className="nav-item nav-link text-primary mx-2 d-flex align-items-center" to="/menu">
-                        <span class="material-symbols-outlined mx-1">menu_book</span>
+                        <span className="material-symbols-outlined mx-1">menu_book</span>
                         Menú</NavLink>
                     <NavLink className="nav-item nav-link text-primary mx-2 d-flex align-items-center" to="/reservation">
-                        <span class="material-symbols-outlined mx-1">restaurant</span>
+                        <span className="material-symbols-outlined mx-1">restaurant</span>
                         Reservaciones
                     </NavLink>
                     <NavLink className="nav-item nav-link text-primary mx-2 d-flex align-items-center" to="/blog">
-                        <span class="material-symbols-outlined mx-1">news</span>
+                        <span className="material-symbols-outlined mx-1">news</span>
                         Blog
                     </NavLink>
                     </div>
@@ -34,7 +34,7 @@ export const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                     <NavLink className="nav-item nav-link text-primary d-flex align-items-center" to="/">
-                        <span class="material-symbols-outlined mx-1">account_circle</span>
+                        <span className="material-symbols-outlined mx-1">account_circle</span>
                         Iniciar Sesión
                     </NavLink>
                     </div>
