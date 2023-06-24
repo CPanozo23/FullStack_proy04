@@ -1,9 +1,9 @@
 import React from 'react'
 export const SlideShow = () => {
   const imageUrls = [
-    './src/assets/img/pxfuel.jpg',
-    './src/assets/img/pxfuel2.jpg',
-    './src/assets/img/pxfuel3.jpg',
+    '../../public/img/pxfuel.jpg',
+    './img/pxfuel2.jpg',
+    '/img/pxfuel3.jpg',
   ]
 
   return (
