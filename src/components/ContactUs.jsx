@@ -9,7 +9,7 @@ export const ContactUs = () => {
             <div className="card">
   <div className="row no-gutters">
     <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-      <img src="https://raw.githubusercontent.com/CPanozo23/FullStack_proy04/master/src/assets/img/pxfuel.jpg" class="card-img imgContact" alt="Imagen" />
+      <img src="./img/contact.jpg" class="card-img imgContact" alt="Imagen" />
         
         <div className="card-body">
             <h3 className="card-title">¿Quieres contactarnos?</h3>
