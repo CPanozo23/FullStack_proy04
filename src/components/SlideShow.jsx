@@ -1,9 +1,8 @@
 import React from 'react'
-import img1 from '../../public/img/pxfuel.jpg'
 export const SlideShow = () => {
   const imageUrls = [
-    img1,
-    './img/pxfuel2.jpg',
+    './img/pxfuel.jpg',
+    '../img/pxfuel2.jpg',
     '/img/pxfuel3.jpg',
   ]
 

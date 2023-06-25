@@ -84,3 +84,12 @@ h1 .material-symbols-outlined {
 .accordion-button:not(.collapsed) .accordion-button::after {
   color: red !important; /* Cambia el color de la flecha hacia abajo cuando el acordeón está desplegado */
 }
+
+.blog{
+  text-align: justify;
+}
+.blog .imgBlog, .reservation img{
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
