@@ -8,7 +8,6 @@ export const DashboardAdmin = () => {
   
   useEffect(() => {
     readDataContact()
-    console.log(infoContact)
   }, [])
 
   const readDataContact = async () => {
