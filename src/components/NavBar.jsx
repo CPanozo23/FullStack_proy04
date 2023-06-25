@@ -33,7 +33,7 @@ export const NavBar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                    <NavLink className="nav-item nav-link text-primary d-flex align-items-center" to="/">
+                    <NavLink className="nav-item nav-link text-primary d-flex align-items-center" to="/dashboardAdmin">
                         <span className="material-symbols-outlined mx-1">account_circle</span>
                         Iniciar Sesión
                     </NavLink>

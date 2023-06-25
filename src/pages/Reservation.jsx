@@ -1,4 +1,19 @@
+import { useEffect, useState } from 'react'
+
 export const Reservation = () =>  {
+
+  useEffect(() => {
+    //luego dejar en otro js 
+    document.getElementById("reservaForm").addEventListener("submit", function(event) {
+      event.preventDefault()
+      let fechaInput = document.getElementById("fecha").value;
+      console.log(fechaInput) // YYYY/MM/DD
+      let fechaActual = new Date();
+      console.log(fechaActual.getDay())
+    })
+  })
+
+  //cleanForm
 
   return(
     <main class="reservation">
@@ -9,7 +24,7 @@ export const Reservation = () =>  {
         Reservaciones
       </h1>
       <article className=''>
-        <form>
+        <form id="reservaForm">
           <div className="row mb-2">
             <div class="form-group col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <label htmlFor="fecha">Fecha</label>
@@ -67,6 +82,7 @@ export const Reservation = () =>  {
       </article>
     </section>
     </main>
+    
   )
 }
 
