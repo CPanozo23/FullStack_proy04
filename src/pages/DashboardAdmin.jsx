@@ -29,9 +29,10 @@ export const DashboardAdmin = () => {
       const actualState = doc.data().state
       const newState = actualState === 'Sin responder' ? 'Respondido' : 'Sin responder'
       await db.collection('contact').doc(id).update({ state: newState })
-      alertMsg('success', 'Estado actualizado')
+      alertMsg('success', 'Estado actualizado', 2000, true)
     }else{
-      alertMsg('error', 'Intente más tarde')
+      alertMsg('error', 'Intente más tarde', 2000, true)
+
     }
   }
 

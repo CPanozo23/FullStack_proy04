@@ -26,12 +26,12 @@ export const ContactUs = () => {
         try {
             await db.collection('contact').add(infoContact) 
             document.getElementById('contactForm').reset()
-            alertMsg('success', 'Información enviada')
+            alertMsg('success', 'Información enviada',3000, true)
         } catch (error) {
             if(error.message.includes('internal')){
-              alertMsg('error', 'Intente más tarde')
+              alertMsg('error', 'Intente más tarde',3000, true)
             }else{
-              alertMsg('error', 'Algo salió mal')
+              alertMsg('error', 'Algo salió mal',3000, true)
             }          
             
         }

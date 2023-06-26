@@ -7,12 +7,12 @@ export const actualDate = () =>{
     const formatDateNow = `${day}/${month}/${year}`
     return formatDateNow
 }
-export const alertMsg = (icon, title) => {
+export const alertMsg = (icon, title, timer, btn) => {
     Swal.fire({
         icon: icon,
         title: title,
-        showConfirmButton: false,
-        timer: 2000,
+        showConfirmButton: btn,
+        timer: timer,
         timerProgressBar: true,
       })
 }
