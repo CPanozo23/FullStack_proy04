@@ -38,7 +38,7 @@ export const ContactUs = () => {
     }
 
     return (
-        <section id="ContactUs" className="bg-light my-0 p-0" onSubmit={submitForm}>
+        <section id="ContactUs" className="bg-light my-0 p-0">
             <div className="container py-1 my-0">
                 <h1 className=" d-flex align-items-center">
                     <span className="material-symbols-outlined">connect_without_contact</span>
@@ -71,7 +71,7 @@ export const ContactUs = () => {
                         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                             <div className="card-body">
                                 <h3>Formulario</h3>
-                                <form id="contactForm">
+                                <form id="contactForm" onSubmit={submitForm}>
                                     <div className="form-group">
                                         <label htmlFor="subject">Asunto:</label>
                                         <select className="form-control" id="subject" name="subject" required onChange={handleChangeForm}>
