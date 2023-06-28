@@ -1,40 +1,17 @@
 import { useEffect, useState } from 'react'
-import { db } from '../firebase/firebase'
 import { alertMsg } from "../helpers/generalFunctions"
+import { useContact } from '../hooks/useContact'
+import { useReserved } from '../hooks/useReserved'
+import { db } from '../firebase/firebase'
 
 export const DashboardAdmin = () => {
-  
-  const [infoContact, setInfoContact] = useState([])
+
+  const {infoContact, changeState}= useContact()
+  const {infoReserved}= useReserved()
   
   useEffect(() => {
-    readDataContact()
+
   }, [])
-
-  const readDataContact = async () => {
-    db.collection('contact').onSnapshot((querySnapshot) => {
-      const docs = []
-      querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id })
-      })
-      setInfoContact(docs)
-    })
-  }
-
-  const changeState = async(id) => {
-    const doc = await db.collection('contact').doc(id).get()
-
-    console.log(doc.data())
-    if (doc.exists){
-      console.log("Encontrado")
-      const actualState = doc.data().state
-      const newState = actualState === 'Sin responder' ? 'Respondido' : 'Sin responder'
-      await db.collection('contact').doc(id).update({ state: newState })
-      alertMsg('success', 'Estado actualizado', 2000, true)
-    }else{
-      alertMsg('error', 'Intente más tarde', 2000, true)
-
-    }
-  }
 
   return (
     <main className="">
@@ -43,6 +20,7 @@ export const DashboardAdmin = () => {
           <span className="material-symbols-outlined">account_circle</span>
           Adminstrador - Dashboard
         </h1>
+        <article>
         <h2>Mensajes de Contacto</h2>
         <div className="table-responsive">
           <table className="table">
@@ -58,6 +36,7 @@ export const DashboardAdmin = () => {
               </tr>
             </thead>
             <tbody>
+            
               {infoContact.map((el) => (
                 <tr key={el.id}>
                   <td>{el.date}</td>
@@ -73,6 +52,44 @@ export const DashboardAdmin = () => {
             </tbody>
           </table>
         </div>
+        </article>
+
+        <article>
+        <h2>Reservas</h2>
+        <div className="table-responsive">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Mesa 2</th>
+                <th>Mesa 4</th>
+                <th>Cliente</th>
+                <th>Email</th>
+                <th>Fono</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {infoReserved.map((el) => (
+                <tr key={el.id}>
+                  <td>{el.dater.day}/{el.dater.month}/{el.dater.year}</td>
+                  <td>{el.hour}:00</td>
+                  <td>{el.table2}</td>
+                  <td>{el.table4}</td>
+                  <td>{el.contact.name} {el.contact.lastname}</td>
+                  <td>{el.contact.email}</td>
+                  <td>{el.contact.phone}</td>
+                  <td><button onClick={()=>changeState(el.id)}>{el.state}</button></td>
+                </tr>
+              ))}
+
+            </tbody>
+          </table>
+        </div>
+        </article>
+
+
       </section>
     </main>
   )

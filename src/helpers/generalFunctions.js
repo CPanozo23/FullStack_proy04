@@ -16,3 +16,14 @@ export const alertMsg = (icon, title, timer, btn) => {
         timerProgressBar: true,
       })
 }
+
+export const reservations = () => {
+    const reservation= {      
+        hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+        totalTable2: 10,
+        totalTable4: 10,
+        countTable2: [10,10,10,10,10,10,10,10,10,10],
+        countTable4: [10,10,10,10,10,10,10,10,10,10]
+    }
+    return reservation
+}
