@@ -26,12 +26,12 @@ export const Blog = () => {
           Blog
         </h1>
         {infoBlog.map((el) => (
-          <article className="container blog">
+          <article className="container blog" key={el.id}>
             <img src={el.urlImg} alt='' className='imgBlog' />
             <h2 className='mt-3'>{el.category}</h2>
             <h3>{el.title}</h3>
-            {el.paragraphs.map((parrafo) => (
-              <p>{parrafo}</p>
+            {el.paragraphs.map((parrafo, index) => (
+              <p key={index}>{parrafo}</p>
             ))}
           </article>
         ))}

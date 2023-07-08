@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { db } from "../firebase/firebase"
 import { actualDate, alertMsg } from "../helpers/generalFunctions"
+import { useContact } from "../hooks/useContact"
 
 
 export const ContactUs = () => {
+    const { addContact } = useContact()
 
     const [infoContact, setInfoContact] = useState({
         subject: '',
@@ -11,7 +13,7 @@ export const ContactUs = () => {
         name: '',
         lastname: '',
         message: '',
-        state: 'Sin responder',
+        state: 'SIN RESPONDER',
         date: actualDate()
     })
 
@@ -24,22 +26,21 @@ export const ContactUs = () => {
     const submitForm = async (e) => {
         e.preventDefault()
         try {
-            await db.collection('contact').add(infoContact) 
+            await addContact(infoContact)
             document.getElementById('contactForm').reset()
-            alertMsg('success', 'Información enviada',3000, true)
+            alertMsg('success', 'Información enviada', 3000, true)
         } catch (error) {
-            if(error.message.includes('internal')){
-              alertMsg('error', 'Intente más tarde',3000, true)
-            }else{
-              alertMsg('error', 'Algo salió mal',3000, true)
-            }          
-            
+            if (error.message.includes('internal')) {
+                alertMsg('error', 'Intente más tarde', 3000, true)
+            } else {
+                alertMsg('error', 'Algo salió mal', 3000, true)
+            }
         }
     }
 
     return (
         <section id="ContactUs" className="bg-light my-0 p-0">
-            <div className="container py-1 my-0">
+            <article className="container py-1 my-0">
                 <h1 className=" d-flex align-items-center">
                     <span className="material-symbols-outlined">connect_without_contact</span>
                     Contacto
@@ -108,7 +109,7 @@ export const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
     )
 }

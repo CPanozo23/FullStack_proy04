@@ -1,4 +1,3 @@
-
 export const actualDate = () =>{
     const dateNow = new Date()
     const day = dateNow.getDate()
@@ -27,3 +26,5 @@ export const reservations = () => {
     }
     return reservation
 }
+
+

@@ -93,3 +93,79 @@ h1 .material-symbols-outlined {
   max-height: 250px;
   object-fit: cover;
 }
+
+.error{
+  background-color: orange;
+  display: flex;
+  align-items: center;
+}
+
+.check_circle{
+  background-color: greenyellow; 
+  display: flex;
+  align-items: center;
+}
+
+.table tr td button{
+  width: 150px;
+  padding: 0.2em;
+  text-align: center;
+  transition: 1s;
+}
+
+
+
+.table tr td button:hover{
+  scale: 0.9;
+}
+
+.stateBtn div, .reservas div:last-child div{
+  width: 130px;
+  padding: 0.2em;
+  text-align: center;
+  cursor: default;
+  font-size: 0.8em;
+}
+
+.reservas div:first-child {
+  margin-left: 2px !important;
+  padding-left: 2px !important;
+}
+.reservas div:last-child {
+  text-align: center !important;
+  margin-left: 2px !important;
+  margin-bottom: 0.2em;
+}
+.reservas div:last-child div, .reservas div:last-child button{
+  height: 2.3em;
+}
+
+.reservas div:last-child button{
+  width: 2.4em !important;
+  padding: 0.2em;
+  text-align: center;
+  transition: 1s;
+  font-size: 0.8em;
+}
+
+.reservas div:last-child button:hover{
+  scale: 0.9;
+}
+
+
+.reservas .iconMaterial{
+  font-size: 1em;
+}
+
+.contact{
+  text-align: justify;
+
+}
+.contact button{
+  font-size: 0.8em;
+  width: 150px;
+}
+
+.contact button span{
+  font-size: 1.7em;
+}

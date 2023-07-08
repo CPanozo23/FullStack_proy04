@@ -33,7 +33,7 @@ export const Menu = () => {
 
           <div className="accordion accordion-flush" id="accordionFlushExample">
             {infoMenu.map((el) => (            
-              <div className="accordion-item">
+              <div className="accordion-item" key={el.id}>
                 <h2 className="accordion-header">
                   <button
                     className="accordion-button collapsed bg-light"
@@ -53,7 +53,7 @@ export const Menu = () => {
                 >
                   <div className="accordion-body">
                     {el.products.map((product) => (            
-                      <div className="row border-bottom">
+                      <div className="row border-bottom" key={product.productname}>
                         <div className="col-10 col-xl-11 col-lg-11 col-md-11 col-sm-10 col-xs-8">{product.productname} <br/> <span className="text-secondary">{product.description}</span> </div>
                         <div className="col-2 col-xl-1  col-lg-1 col-md-1 col-sm-2 col-xs-4 text-end"><strong>${product.value}</strong></div>                       
                       </div>                     

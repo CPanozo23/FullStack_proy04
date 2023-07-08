@@ -1,16 +1,16 @@
 import { useState } from "react"
 import { reservations } from '../helpers/generalFunctions'
 
-export const useCounter = (initialValue = reservations) => {
+export const useSumReserved = (initialValue = reservations) => {
 
-    const [counter, setCounter]=useState(initialValue)
+    const [sumReserved, setSumReserved]=useState(initialValue)
 
-  const increment = (suma) =>{  
-    setCounter(JSON.parse(localStorage.getItem('sumReserv')))
+  const incrementReserved = (suma) =>{  
+    setSumReserved(JSON.parse(localStorage.getItem('sumReserv')))
   }
 
   return{
-    counter,
-    increment
+    sumReserved,
+    incrementReserved
   }
 }
