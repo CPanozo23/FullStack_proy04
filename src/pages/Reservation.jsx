@@ -6,9 +6,9 @@ import moment from 'moment'
 import { useNavigate } from 'react-router-dom';
 
 export const Reservation = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const { sumReserved, incrementReserved } = useSumReserved()
+  const { incrementReserved } = useSumReserved()
   let targets = [
     document.querySelector('[name="hour"]'),
     document.querySelector('[name="table2"]'),
@@ -195,7 +195,6 @@ export const Reservation = () => {
                 <label htmlFor="table4">Mesa para 4 personas</label>
                 <input type="number" id="table4" name="table4" className="form-control border-primary" min="0" max={JSON.parse(localStorage.getItem("sumReserv")) !== null ? JSON.parse(localStorage.getItem("sumReserv")).countTable4[hourSelect] : "10"} onChange={handleChangeForm} disabled />
                 <span name="tbCant4" hidden={true}>Disponibles: {JSON.parse(localStorage.getItem("sumReserv")) !== null ? JSON.parse(localStorage.getItem("sumReserv")).countTable4[hourSelect] : "10"} /10</span>
-
               </div>
             </div>
             <h3>Datos de contacto</h3>

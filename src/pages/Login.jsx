@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react'
-import SlideShow from '../components/SlideShow'
 import { useUser } from '../hooks/useUser'
 import { alertMsg } from '../helpers/generalFunctions'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const Login = () => {
-  const navigate = useNavigate();
-  //const { infoUser, searchUser, userName, setUserName, isValidPermissions, setIsValidPermissions } = useUser()
-  const { infoUser, searchUser } = useUser()
+const Login = () => {
+  const navigate = useNavigate()
+  const { searchUser } = useUser()
 
   const [inputUser, setInputUser] = useState({
     email: '',
@@ -26,13 +24,15 @@ export const Login = () => {
     e.preventDefault()
     try {
       const user = await searchUser(inputUser)
-      if(user!==null){
-        alertMsg('success', 'Bienvenid@ '+user.name, 2000, true)/
+      if (user !== null) {
+        localStorage.setItem('user', JSON.stringify({ user }))
         navigate('/dashboardAdmin')
-      }else{
+        alertMsg('success', 'Bienvenid@ ' + user.name, 2000, true)
+      } else {
         alertMsg('error', 'usuario o contraseña incorrecto', 3000, true)
       }
     } catch (e) {
+      alertMsg('error', 'Intente más tarde', 2000, true)
       console.log(e)
     }
   }
@@ -45,36 +45,33 @@ export const Login = () => {
           Iniciar Sesión
         </h1>
         <article>
-        <div className="card">
-          <div className="row no-gutters">
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-              <img src="./img/about.jpg" className="card-img imgAbout" alt="imagen Sobre nosotros" />
-            </div>
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-              <div className="card-body">
-              <form id="loginForm" onSubmit={submitForm} className="col-12">
-            <div className="form-group mb-3">
-              <label htmlFor="email">Email:</label>
-              <input type="email" className="form-control" id="email" name="email" required onChange={handleChangeForm} />
-            </div>
-            <div className="form-group mb-3">
-              <label htmlFor="pw">Contraseña:</label>
-              <input type="password" className="form-control" id="pw" name="pw" required onChange={handleChangeForm} />
-            </div>
-            <button type="submit" className="btn btn-primary mt-3 col-12">
-              Ingresar
-            </button>
-          </form>
+          <div className="card">
+            <div className="row no-gutters">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                <img src="./img/about.jpg" className="card-img imgAbout" alt="imagen Sobre nosotros" />
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                <div className="card-body">
+                  <form id="loginForm" onSubmit={submitForm} className="col-12">
+                    <div className="form-group mb-3">
+                      <label htmlFor="email">Email:</label>
+                      <input type="email" className="form-control" id="email" name="email" required onChange={handleChangeForm} />
+                    </div>
+                    <div className="form-group mb-3">
+                      <label htmlFor="pw">Contraseña:</label>
+                      <input type="password" className="form-control" id="pw" name="pw" required onChange={handleChangeForm} />
+                    </div>
+                    <button type="submit" className="btn btn-primary mt-3 col-12">
+                      Ingresar
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-          
         </article>
       </section>
     </main>
   )
 }
-
 export default Login

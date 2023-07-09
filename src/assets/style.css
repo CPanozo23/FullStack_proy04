@@ -169,3 +169,7 @@ h1 .material-symbols-outlined {
 .contact button span{
   font-size: 1.7em;
 }
+
+.btnClose{
+  height: 3em;
+}

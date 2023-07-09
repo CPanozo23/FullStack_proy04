@@ -2,24 +2,24 @@ import { useContact } from '../../hooks/useContact'
 import { alertMsg } from "../../helpers/generalFunctions"
 
 export const ContactDA = () => {
-  const {infoContact, changeState}= useContact()
-  return(
+  const { infoContact, changeState } = useContact()
+  return (
     <article>
-        <h2>Mensajes de Contacto</h2>
-        <section className="stateBtn d-flex">
-          Estados:
-          <div className="btn btn-warning d-flex mx-2">
-            <span className="material-symbols-outlined d-flex">error</span>
-            SIN RESPONDER
-          </div>
-          <div className="btn btn-success d-flex"> 
-            <span className="material-symbols-outlined">check_circle</span>
-            RESPONDIDO
-          </div>
-        </section>
-        <section className='mt-2 contact'>
+      <h2>Mensajes de Contacto</h2>
+      <section className="stateBtn d-flex">
+        Estados:
+        <div className="btn btn-warning d-flex mx-2">
+          <span className="material-symbols-outlined d-flex">error</span>
+          SIN RESPONDER
+        </div>
+        <div className="btn btn-success d-flex">
+          <span className="material-symbols-outlined">check_circle</span>
+          RESPONDIDO
+        </div>
+      </section>
+      <section className='mt-2 contact'>
         {infoContact.map((el, index) => (
-          <article key={el.id} className={`d-flex border-bottom ${index%2===0? 'bg-light':''} row`}>
+          <article key={el.id} className={`d-flex border-bottom ${index % 2 === 0 ? 'bg-light' : ''} row`}>
             <div className='row col-12 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12'>
               <div className='col-12 col-xl-2 col-lg-2 col-md-4 col-sm-4 fw-bold'>
                 {el.datec.day}/{el.datec.month}/{el.datec.year}
@@ -41,16 +41,14 @@ export const ContactDA = () => {
               </div>
             </div>
             <div className='col-12 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 align-items-center my-2'>
-              <button type="button" className={el.state==="SIN RESPONDER" ? "btn btn-warning d-flex": "btn btn-success d-flex"} onClick={()=>changeState(el.id)} >
-                <span className="material-symbols-outlined">{el.state==="SIN RESPONDER" ? "error": "check_circle"}</span>
-                    {el.state}
+              <button type="button" className={el.state === "SIN RESPONDER" ? "btn btn-warning d-flex" : "btn btn-success d-flex"} onClick={() => changeState(el.id)} >
+                <span className="material-symbols-outlined">{el.state === "SIN RESPONDER" ? "error" : "check_circle"}</span>
+                {el.state}
               </button>
             </div>
           </article>
-                  
-              ))}
-        </section>
-
-        </article>
+        ))}
+      </section>
+    </article>
   )
 }

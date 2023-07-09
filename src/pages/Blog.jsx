@@ -3,7 +3,7 @@ import { db } from '../firebase/firebase'
 
 export const Blog = () => {
   const [infoBlog, setInfoBlog] = useState([])
-  
+
   useEffect(() => {
     readDataBlog()
   }, [])

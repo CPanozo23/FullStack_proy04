@@ -1,12 +1,9 @@
 import { useState } from "react"
-import { db } from "../firebase/firebase"
 import { actualDate, alertMsg } from "../helpers/generalFunctions"
 import { useContact } from "../hooks/useContact"
 
-
 export const ContactUs = () => {
     const { addContact } = useContact()
-
     const [infoContact, setInfoContact] = useState({
         subject: '',
         email: '',

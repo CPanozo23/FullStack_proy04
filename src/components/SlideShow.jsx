@@ -10,10 +10,7 @@ export const SlideShow = () => {
     <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-indicators">
         {imageUrls.map((url, index) => (
-          <button 
-          key={index} type="button" data-bs-target= "#carouselExampleAutoplaying" data-bs-slide-to={index} className={index === 0 ? "active" : ""}
-          aria-current={index === 0 ? "true" : "false"} aria-label={`Slide ${index + 1} `}
-          ></button>
+          <button key={index} type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : "false"} aria-label={`Slide ${index + 1} `}></button>
         ))}
       </div>
       <div className="carousel-inner">
